@@ -11,20 +11,15 @@ public class FoudException {
 
 		try {
 			System.out.println(date.getClass().getName());
-			System.out.println(today.getClass().getName());
-		} catch (java.lang.NullPointerException e) {
-			System.out.println("erreur : "+e.getMessage());
+		} catch (Exception e) {
+			System.out.println("erreur : "+e);
 			System.out.println("ignore...");
-		}finally{
-            if ( today != null ) {
-            	System.out.println(today.getClass().getName());
-            }
-            if ( date != null ) {
-            	System.out.println(date.getClass().getName());
-            }
-			
 		}
-		
-	}
+		finally{
+			System.out.println(today.getClass().getName());
+		} 
 
+	}
 }
+
+

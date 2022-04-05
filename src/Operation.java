@@ -13,20 +13,35 @@ public class Operation {
 
 		return a*b;
 	}
-	public static int div(int a,int b) {
-		int c=0;
-		
-		return b!=c ? a/b : 0;
+	
+	
+	//division  exo 1.2
+	public static int div(int a,int b)throws Exception  {
+
+		if (b==0) {
+			throw new Exception("Division par zÃ©ro impossible");
+		}
+		return  a/b;
+
 	}
+
 
 
 	public static void main(String[] args) {
 
-		System.out.println("addition :"+add(5,2));
-		System.out.println("soustration :"+sub(5,2));
-		System.out.println("multiplication:"+mul(5,2));
-		System.out.println("division: "+div(5,2));
-		System.out.println("division par zéro : "+div(3,0));
+		
+		// exo 1.2
+		try {
+			System.out.println("division: "+div(5,0));
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			System.out.println("addition :"+add(5,2));
+			System.out.println("soustration :"+sub(5,2));
+			System.out.println("multiplication:"+mul(5,2));
+		}
+	
 
 	}
 

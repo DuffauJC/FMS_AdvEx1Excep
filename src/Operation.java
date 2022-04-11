@@ -34,8 +34,8 @@ public class Operation {
 		try {
 			System.out.println("division: "+div(5,0));
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println(e.getMessage());
+			//e.printStackTrace();
 		}finally {
 			System.out.println("addition :"+add(5,2));
 			System.out.println("soustration :"+sub(5,2));
